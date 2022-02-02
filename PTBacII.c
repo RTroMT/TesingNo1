@@ -9,13 +9,13 @@ void calculation(int a, int b, int c, double delta)
         result1 = (-b + sqrt(delta))/(2*a);
         result2 = (-b - sqrt(delta))/(2*a); 
         printf("\nPT co 2 nghiem: ");
-        printf("\nNghiem 1: ", result1);
-        printf("\nNghiem 2: ", result2);
+        printf("\nNghiem 1: %f", result1);
+        printf("\nNghiem 2: %f", result2);
     }
     else if(delta == 0)
     {
-        result1 = -b/(2*a);
-        printf("PT co nghiem chung: ",result1 );
+        result1 = (-b/(2*a));
+        printf("PT co nghiem chung: %f\n", result1);
     }
     else printf("PT vo nghiem \n");
 }
