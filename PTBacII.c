@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 
-void calculation(int a, int b, int c, double delta)
+void calculation(int a, int b, int c)
 {
-    double result1,result2;
+    double result1 = 0,result2 = 0;
+    double delta=(b*b-4*a*c);
     if(delta > 0)
     {
         result1 = (-b + sqrt(delta))/(2*a);
@@ -17,21 +18,22 @@ void calculation(int a, int b, int c, double delta)
         result1 = (-b/(2*a));
         printf("PT co nghiem chung: %f\n", result1);
     }
-    else printf("PT vo nghiem \n");
+    else 
+    {
+        printf("PT vo nghiem \n");
+    }
 }
 
 int main()
 {
-    int a, b, c;
-    double delta;
+    int a = 0, b = 0, c = 0;
     printf("Nhap cac co so.\n");
     printf("Nhap co so 1: ");
     scanf("%d",&a);
     printf("Nhap co so 2: ");
     scanf("%d",&b);
     printf("Nhap co so 3: ");
-    scanf("%d",&c);
-    delta=(b*b-4*a*c);
-    calculation(a,b,c,delta);
+    scanf("%d",&c);   
+    calculation(a,b,c);
     return 0;
 }
